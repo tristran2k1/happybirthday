@@ -35,8 +35,8 @@ div#video {
 }
 
 div#video iframe {
-  width: 255px;
-  height: 155px;
+  width: 400px;
+  height: 244px;
 }
 
 #people {
@@ -443,8 +443,8 @@ div#sea {
   }
 
   div#video {
-    right: 290px;
-    bottom: 235px;
+    width: 345px;
+    height: 271px;
   }
 
   div#video iframe {

@@ -200,7 +200,7 @@ function loop() {
 
   // increase the hue to get different colored fireworks over time
   hue += 0.5;
-
+  
   // normally, clearRect() would be used to clear the canvas
   // we want to create a trailing effect though
   // setting the composite operation to destination-out will allow us to clear the canvas at a specific opacity, rather than wiping it entirely
@@ -217,6 +217,8 @@ function loop() {
   while (i--) {
     fireworks[i].draw();
     fireworks[i].update(i);
+    var audio = new Audio('../fireword.m4a');
+    audio.play(); 
   }
 
   // loop over each particle, draw it, update it
@@ -224,6 +226,8 @@ function loop() {
   while (i--) {
     particles[i].draw();
     particles[i].update(i);
+    var audio = new Audio('../fireword.m4a');
+  audio.play(); 
   }
 
   // launch fireworks automatically to random coordinates, when the mouse isn't down
@@ -249,6 +253,8 @@ function loop() {
   }
 }
 
+
+
 window.onload = function () {
   var merrywrap = document.getElementById("merrywrap");
   var box = merrywrap.getElementsByClassName("giftbox")[0];
@@ -256,7 +262,8 @@ window.onload = function () {
   var stepMinutes = [200, 200, 100, 100];
   const click = document.getElementById("js-click")
 
-
+  var audio = new Audio('../fireword.m4a');
+  audio.play(); 
 
   /*
   display: hidden các div dưới trong css
@@ -271,6 +278,8 @@ window.onload = function () {
     merrywrap.className = 'merrywrap step-' + step;
   }
   function openBox() {
+    var audio = new Audio('../fireword.m4a');
+  audio.play(); 
     if (step === 1) {
       box.removeEventListener("click", openBox, false);
     }
@@ -294,7 +303,8 @@ window.onload = function () {
 
 function reveal() {
   document.querySelector('.merrywrap').style.backgroundColor = 'transparent';
-
+  var audio = new Audio('../fireword.m4a');
+  audio.play(); 
   loop();
 
   var w, h;
